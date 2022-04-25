@@ -4,7 +4,7 @@ import Nav from "./components/Nav";
 import CreatePage from "./pages/CreatePage";
 import UpdatePage from "./pages/UpdatePage";
 
-function App() {
+export default function App() {
     return (
         <main>
             <Nav />
@@ -17,5 +17,3 @@ function App() {
         </main>
     );
 }
-
-export default App;
