@@ -40,7 +40,7 @@ export default function PostForm({ savePost, post }) {
     function handleSubmit(event) {
         event.preventDefault();
         const formData = {
-            // create a new objebt to hold the value from states / input fields
+            // create a new objebt to store the value from states / input fields
             title: title,
             image: image,
             body: body
@@ -64,12 +64,22 @@ export default function PostForm({ savePost, post }) {
             </label>
             <label>
                 Body
-                <input type="text" value={body} placeholder="Type a body text" onChange={e => setBody(e.target.value)} />
+                <input
+                    type="text"
+                    value={body}
+                    placeholder="Type a body text"
+                    onChange={e => setBody(e.target.value)}
+                />
             </label>
             <label>
                 Image
                 <input type="file" className="file-input" accept="image/*" onChange={handleImageChange} />
-                <img className="image-preview" src={image} alt="Choose" onError={event => (event.target.src = imgPlaceholder)} />
+                <img
+                    className="image-preview"
+                    src={image}
+                    alt="Choose"
+                    onError={event => (event.target.src = imgPlaceholder)}
+                />
             </label>
             <p className="text-error">{errorMessage}</p>
             <button type="submit">Save</button>
