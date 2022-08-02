@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from "react";
 import PostCard from "../components/PostCard";
 
@@ -27,5 +25,3 @@ export default function HomePage() {
         </section>
     );
 }
-
-
